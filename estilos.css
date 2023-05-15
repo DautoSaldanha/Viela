@@ -2,46 +2,8 @@ body{
   padding: 0;
     margin: 0;
 }
-#nav {
-    background-color: #ff7910;
-	  text-align: center;
-    height: 100px;
-    
-}
-
-
-#nav a {
-	color: white;
-	padding: 10px;
-	text-decoration: none;
-	font-size: 18px;
-	font-weight: bold;
-  float: right;
-  margin-right: 52px;
-	font-family: Arial, sans-serif;
-  margin-top: 10px;
-  border-radius: 15px;
-}
-
-#nav a:hover {
-    text-decoration: underline;
-}
-
-#home {
-  background-color: rgba(151, 5, 151, 0.849);
-
-}
-
-#contato {
-  background-color: rgb(255, 51, 0);
-}
-#faca-parte{
-  background-color: rgba(30, 255, 0, 0.726);
-}
-#sobre-nos {
+.padding{
   text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	background-color: rgb(132, 0, 255);
 }
 
 
@@ -98,9 +60,7 @@ h3:hover{
   height: 315px;
   background-color: rgba(151, 5, 151, 0.849);
 }
-#nav a{
-  color: rgb(36, 35, 35);
-}
+
 
 .card h2{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -109,16 +69,17 @@ h3:hover{
   font-size: 18px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-@media screen and (max-width: 500px) {s
+@media screen and (max-width: 700px) {
     .card {
         margin-bottom: 20px;
     }
 }
 
-#fundodalogo{
-    background-color: #ff7910;
-    height: 50px;
+.carousel-inner{
+  padding: 4px;
+  background-color: rgb(44, 44, 44);
 }
+
 
 .carousel-item img {
     height: 560px;
@@ -154,7 +115,7 @@ h3:hover{
   .carousel-pause {
     position: absolute;
     border-radius: 8px;
-    top: 10px;
+    top: 20px;
     right: 30px;
     z-index: 999;
     background-color: #007bff;
@@ -212,11 +173,20 @@ h3:hover{
     
     .face {
         margin: 0 auto;
-	      width: 400px;
+	      width: 350px;
 	      height: 350px;
 	      perspective: 700px;
 	    }
 	    
+      .roleta .descricao{
+        margin: -19px 0 0 -106px;
+        font-size: 25px;
+        width: 235px;
+        height: 36px;
+      }
+      .face p{
+        font-size: 15px;
+      }
 	    .front, .back {
 	      position: absolute;
 	      width: 100%;
@@ -230,6 +200,7 @@ h3:hover{
         text-decoration: none;
         text-align: center;
         background-color: yellow;
+        font-size: 18px;
         color: black;
         width: 50%;
         margin: 0 auto;
@@ -258,7 +229,14 @@ h3:hover{
 	      transform: rotateY(180deg);
 	      z-index: 0;
 	    }
-	    
+
+	    .face .nuca{
+        font-style: i;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 14px;
+      }
+
 	    .face:hover .back {
 	      transform: rotateY(0);
 	      z-index: 1;
@@ -272,7 +250,6 @@ h3:hover{
 	    
 
 	    .vira section {
-        border-right: 1px solid #ccc;
 	      display: inline-block;
 	    }
 	    
@@ -294,7 +271,7 @@ h3:hover{
     }
     .front h2{
       position: absolute;
-      width: 330px; height: 40px;
+      width: 3300px; height: 40px;
       top: 50%; left: 50%;
       position: absolute;
       margin: -25px 0 0 -165px;
@@ -369,7 +346,7 @@ h3:hover{
 .formulario .btn-enviar  { width:160px; float:left; margin-top:5px; background-color:#ffffff; color:#7b7979; border: 1px #dee5ed solid; border-radius:3px; cursor:pointer; padding:0.5em 0em; font-size:1.5em; font-family:'open_sansregular'; transition: 0.2s; }
 .formulario 
 .info     {background-color: black; color: black; width:100%; float:left; display:block; margin-bottom:20px; }
-.info p   { width:100%; margin-bottom:5px; font-size: 0.79em; color:#7b7979; }
+.info p   { text-decoration: none; width:100%; margin-bottom:5px; font-size: 0.79em; color:#7b7979; }
 .info p i { margin-right:5px; }
 /*Botão Padrao Inicio*/
 .btn_social-1 { float:left; }
@@ -388,7 +365,18 @@ h3:hover{
   width: 100%;
   position: absolute;
 }
+@media (max-width:600px){
 
+  .roda  { width:100%; }
+  .vira{
+    height: 20px;
+  }
+ }
+
+.text-break{
+  word-wrap: break-word;
+  word-break:  break-word;
+}
 .coluna p{
   margin-left: 100px;
   font-size: 22px;
@@ -407,6 +395,8 @@ h3:hover{
 .doe-10{
   height: 400px;
   margin-left: 36%;
+  border: 3px solid black;
+  border-radius: 50px;
 }
 #p-doe{
   text-align: center;
@@ -430,4 +420,103 @@ h3:hover{
   font-size: 18px;
   margin-left: 35px;
   text-decoration: underline;
+}
+
+
+
+
+
+
+
+nav {
+  background-color: #333;
+  height: 80px; /* aumentei a altura para acomodar a logo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  border-radius: 25px;
+  height: 60px; /* ajuste a altura da imagem para corresponder à altura do menu */
+  margin-left: 20px; /* adicione margem à esquerda para separar a imagem do início da página */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* alinha as opções à direita */
+  align-items: center;
+  height: 100%;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+
+.roleta {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.roleta section {
+  flex-basis: calc(33.33% - 20px); /* tamanho da seção */
+  margin-right: 20px; /* espaçamento entre as seções */
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 468px) {
+  .roleta .face {
+    height: 250px;
+    width: 350px;
+    flex-basis: 100%; /* tamanho da seção em telas menores */
+    margin-right: 0; /* remove espaçamento entre as seções */
+  }
+  .roleta .face p{
+    font-size: 12px;
+  }
+  .roleta .face h4{
+    font-size: 15px;
+  }
+  .roleta .descricao{
+    margin: -15px 0 0 -106px;
+    font-size: 20px;
+    width: 212px;
+    height: 30px;
+  }
+  .quem-somos p{
+    width: 400px;
+  }
+    #infodeinfo {
+    margin-left: 80px;
+  }
+  
+  .image-center img{
+    height: 280px;
+    width: 280px;
+  }
+  .image-center{
+    display: flex;
+  }
+}
+.quem-somos  p{
+  line-height: 25px; /* ou 50% */
 }
