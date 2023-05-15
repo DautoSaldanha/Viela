@@ -2,14 +2,19 @@
 body{
   margin: 0;
   padding: 0;
+  text-align: center;
   
 }
+.padding{
+  text-align: center;
+}
 #doando{
+  position: absolute;
   text-decoration: underline;
   color: crimson;
   margin-left: 11%;
   font-weight: bold;
-    font-size: 30px;
+  font-size: 30px;
 }
 #voluntario{
   position: absolute;
@@ -24,16 +29,22 @@ body{
     text-align: center;
     font-size: 35px;
   }
+  .formas-de-ajudar p{
+    text-align: center;
+    font-size: 17px;
+    padding: 5px;
+  }
   .p-formas-de-ajudar img{
     width: 90px;
   }
   .formas-de-ajudar{
+    flex-wrap: wrap; 
     margin: 0;
     position: relative;
     display: inline-block;
     margin: 6%;
     border-radius: 30px;
-    width: 500px;
+    width: 490px;
     height: 400px;
   }
   .formas-de-ajudar h1{
@@ -41,17 +52,15 @@ body{
   }
   .formas-de-ajudar a{
     font-weight: bold;
-    color: bl;
   }
   .formas-de-ajudar h5{
+    margin: 0 auto;
     position: relative;
     width: 200px;
     background-color: rgb(255, 196, 0);
     border-radius: 25px;
     height: 23px;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 50%;
     font-size: 18px;
     font-weight: bold;
   }
@@ -77,12 +86,6 @@ body{
   .formas-de-ajudar:hover{
     transform: translateY(-6px);
   }
-  .formas-de-ajudar p{
-    position: absolute;
-    text-align: center;
-    width: 400px;
-    height: 5px;
-  }
   ul{
     text-align: center;
     margin-left: 4%;
@@ -91,4 +94,27 @@ body{
     font-weight: bold;
     text-align: center;
     font-size: 28px;
+  }
+  
+  
+   
+   @media screen and (max-width: 800px) {
+    .formas-de-ajudar{
+      width: 300px;
+      height: 450px;
+    }
+    .formas-de-ajudar p{
+      font-size: 14px;
+    }
+    .coluna a{
+      font-size: 15px;
+      margin-left: -80px;
+    }
+    #nav  {
+      margin-top: -10px;
+    }
+    #fundodalogo{
+      position: absolute;
+    }
+    
   }
